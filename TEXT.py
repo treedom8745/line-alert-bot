@@ -15,6 +15,7 @@ def index():
 def webhook():
     body = request.get_json()
     print(json.dumps(body, indent=4))
+    return "OK"
 
     for event in body.get("events", []):
         if event["type"] == "message":
